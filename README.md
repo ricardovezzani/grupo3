@@ -13,10 +13,10 @@
 Este repositório contém todas as entregas do projeto final da disciplina de Sistemas Operacionais, divididas em duas etapas complementares:
 
 * **`slides/`**: Slides da apresentação e motivação do projeto (Entregue na Etapa 1).
-* **`video/`**: Vídeo de apresentação de 5 a 7 minutos (Entregue na Etapa 1).
-* **`code/`**: Códigos-fonte dos arquivos modificados no kernel xv6 para implementação do Priority Scheduling.
-* **`tests/`**: Programas de usuário criados para testar a syscall e avaliar o algoritmo de escalonamento.
-* **`report/`**: Relatório técnico contendo introdução, código, resultados experimentais, análise e conclusões.
+* **`video/`**: Vídeo de apresentação (Entregue na Etapa 1).
+* **`code/`**: Códigos-fonte dos arquivos modificados no kernel xv6.
+* **`tests/`**: Programas criados para testar a syscall e avaliar métricas.
+* **`report/`**: Relatório.
 
 ---
 
@@ -24,12 +24,16 @@ Este repositório contém todas as entregas do projeto final da disciplina de Si
 
 A primeira etapa focou na apresentação teórica do trabalho.
 
-**Conteúdo abordado no vídeo:**
-1. Apresentação do grupo e tema escolhido.
+1. Slides com detalhes do projeto 
+2. Vídeo de apresentação
+3. README com nomes dos integrantes e descrição das etapas entregues.
+
+Conteúdo abordado no vídeo:
+1. Apresentação do grupo e tema escolhido
 2. Motivação: por que o escalonamento por prioridade é importante?
-3. Funcionamento do Priority Scheduling.
-4. Explicação da syscall `setpriority(int)`.
-5. Proposta de implementação no xv6 (arquivos a modificar).
+3. Funcionamento do Priority Scheduling
+4. Explicação da syscall setpriority(int)
+5. Proposta de implementação no xv6 (arquivos a modificar)
 
 ---
 
@@ -41,7 +45,7 @@ A segunda etapa consiste na implementação prática do escalonamento por priori
 
 Para compilar e testar as modificações implementadas, siga os passos abaixo:
 
-1. **Pré-requisitos:** Certifique-se de ter o ambiente xv6-riscv configurado com as ferramentas de compilação para RISC-V (como `riscv64-unknown-elf-gcc`) e o emulador QEMU instalados no seu sistema.
+1. **Pré-requisitos:** É necessário ter o ambiente xv6-riscv configurado com as ferramentas de compilação e o emulador QEMU instalados.
 2. **Integração dos Arquivos:** Copie os arquivos presentes na pasta `code/` para o diretório raiz do xv6, substituindo os arquivos originais.
    * Os arquivos modificados incluem: `proc.c`, `proc.h`, `syscall.c`, `syscall.h`, `sysproc.c`, `defs.h`, `user.h`, `usys.pl` e o `Makefile`.
 3. **Compilação:** Execute o comando `make` na raiz do projeto xv6 para compilar o kernel atualizado e os programas de teste.
